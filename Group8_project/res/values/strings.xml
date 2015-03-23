@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Group8_project</string>
+
+    <string-array name="login">
+        <item>Student</item>
+        <item>Faculty</item>
+        <item>Admin</item>
+    </string-array>
+    <string-array name="ResCat">
+        <item>Document</item>
+        <item>Communication</item>
+    </string-array>
+
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_main">Main</string>
+    <string name="title_activity_home">Home</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_dashboardfaculty">Dashboardfaculty</string>
+    <string name="title_activity_register">Register</string>
+    <string name="title_activity_resources">Resources</string>
+    <string name="title_activity_search_faculty">SearchFaculty</string>
+
+</resources>

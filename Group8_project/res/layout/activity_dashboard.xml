@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:background="@drawable/bg"
+  android:layout_height="fill_parent">
+    <AbsoluteLayout android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/absoluteLayout1">
+        <TextView android:text="Dashboard" android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="95dp" android:layout_y="21dp"></TextView>
+        <TextView android:text="Search Faculty" android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceSmall" android:textColor="#000000" android:layout_width="58dp" android:layout_x="42dp" android:layout_y="140dp"></TextView>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/searchfaculty" android:layout_x="21dp" android:layout_y="76dp" android:id="@+id/dashsearchfaculty"></ImageView>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/profile" android:layout_x="26dp" android:layout_y="191dp" android:id="@+id/dashprofile"></ImageView>
+        <TextView android:text="Profile" android:layout_height="wrap_content" android:id="@+id/textView3" android:textAppearance="?android:attr/textAppearanceSmall" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="48dp" android:layout_y="262dp"></TextView>
+
+        <ImageView
+            android:id="@+id/dashclass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="210dp"
+            android:layout_y="80dp"
+            android:src="@drawable/myclass" />
+
+        <ImageView
+            android:id="@+id/dashmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="200dp"
+            android:layout_y="193dp"
+            android:src="@drawable/message" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="214dp"
+            android:layout_y="259dp"
+            android:text="Message"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/phoneProfilenew"
+            android:layout_width="66dp"
+            android:layout_height="wrap_content"
+            android:layout_x="225dp"
+            android:layout_y="147dp"
+            android:text="Schedule class"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/nameProfilenew"
+            android:layout_width="78dp"
+            android:layout_height="wrap_content"
+            android:layout_x="119dp"
+            android:layout_y="370dp"
+            android:text="Resource sharing"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/dashresource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="112dp"
+            android:layout_y="295dp"
+            android:src="@drawable/resources" />
+
+    </AbsoluteLayout>
+    
+</LinearLayout>

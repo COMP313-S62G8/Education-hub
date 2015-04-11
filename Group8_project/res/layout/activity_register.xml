@@ -1,31 +1,110 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:orientation="vertical"
-  android:layout_width="fill_parent"
-  android:background="@drawable/bg"
-  android:layout_height="fill_parent">
-    <AbsoluteLayout android:id="@+id/absoluteLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <EditText android:layout_height="wrap_content" android:hint="name" android:inputType="textPersonName" android:layout_x="5dp" android:layout_y="64dp" android:layout_width="301dp" android:id="@+id/nameReg">
-            <requestFocus></requestFocus>
-        </EditText>
-        <EditText android:layout_height="wrap_content" android:hint="email" android:layout_width="299dp" android:inputType="textEmailAddress" android:layout_x="6dp" android:layout_y="110dp" android:id="@+id/emailReg"></EditText>
-        <Button android:text="Register" android:layout_height="46dp" android:id="@+id/registerReg" android:layout_width="113dp" android:layout_x="186dp" android:layout_y="371dp"></Button>
-        <EditText android:inputType="phone" android:layout_height="wrap_content" android:hint="phone number" android:id="@+id/phoneReg" android:layout_width="298dp" android:layout_x="7dp" android:layout_y="203dp"></EditText>
-        <EditText android:inputType="textPassword" android:layout_height="wrap_content" android:hint="password" android:id="@+id/passwordReg" android:layout_width="297dp" android:layout_x="6dp" android:layout_y="250dp"></EditText>
-        <EditText android:inputType="textPassword" android:layout_height="wrap_content" android:hint="conform password" android:id="@+id/conformpassReg" android:layout_width="298dp" android:layout_x="5dp" android:layout_y="303dp"></EditText>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        android:background="@drawable/bckg"
+        >
+     <EditText
+        android:id="@+id/email_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/phone"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:hint="Email id"
+        android:maxLength="40"
+        android:inputType="textEmailAddress" >
 
-        <Spinner
-            android:id="@+id/spinnerReg"
-            android:layout_width="204dp"
-            android:layout_height="48dp"
-            android:layout_x="97dp"
-            android:layout_y="154dp"
-            android:entries="@array/login" >
-</Spinner>
-        <TextView android:text="Signup as" android:layout_height="wrap_content" android:id="@+id/textView2" android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="13dp" android:layout_y="160dp"></TextView>
-        <TextView android:text="Register" android:layout_height="wrap_content" android:id="@+id/textView1" android:textAppearance="?android:attr/textAppearanceLarge" android:textColor="#000000" android:layout_width="wrap_content" android:layout_x="117dp" android:layout_y="15dp"></TextView>
+    </EditText>
 
-    </AbsoluteLayout>
-    
-</LinearLayout>
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/email_id"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:maxLength="10"
+        android:hint="Phone Number"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/phone"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:maxLength="30"
+        android:hint="Name"
+        android:inputType="textPersonName">
+        <requestFocus />
+      </EditText>  
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/email_id"
+        android:layout_alignRight="@+id/email_id"
+        android:layout_below="@+id/email_id"
+        android:addStatesFromChildren="true"
+        android:background="@android:drawable/edit_text"
+        android:baselineAligned="false"
+        android:id="@+id/rl"
+        android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/show_hide"
+                style="@android:style/Widget.Button.Inset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/show"
+                 />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/show_hide"
+                android:background="@null"
+                android:ems="10"
+                android:maxLength="40"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </RelativeLayout>
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Log in" 
+        android:onClick="action"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rl"
+        android:layout_alignRight="@+id/rl"
+        android:layout_below="@+id/rl"
+        android:layout_marginTop="10dp"
+        android:text="Register"
+        android:onClick="action"
+        android:textSize="20sp" />
+
+</RelativeLayout>

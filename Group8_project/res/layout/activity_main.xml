@@ -1,16 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg"
-    
-    >
-    <AbsoluteLayout android:id="@+id/absoluteLayout1" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <TextView android:text="Welcome to Education Hub" android:textColor="#000000" android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_x="44dp" android:layout_y="32dp"></TextView>
-        <TextView android:text="If you registered then," android:layout_height="wrap_content" android:id="@+id/textView2" android:textColor="#000000" android:layout_width="wrap_content" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_x="82dp" android:layout_y="234dp"></TextView>
-        <Button android:text="Login" android:layout_y="267dp" android:layout_width="95dp" android:layout_x="110dp" android:layout_height="45dp" android:id="@+id/login1"></Button>
-        <Button android:layout_width="106dp" android:text="Home" android:layout_x="107dp" android:layout_y="108dp" android:layout_height="46dp" android:id="@+id/home"></Button>
-        <Button android:layout_width="104dp" android:text="Register" android:layout_x="108dp" android:layout_y="167dp" android:layout_height="45dp" android:id="@+id/register1"></Button>
+    android:background="@drawable/bckg"
+    android:orientation="vertical" >
+
+    <AbsoluteLayout
+        android:id="@+id/absoluteLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/login1"
+            android:layout_width="95dp"
+            android:layout_height="45dp"
+            android:layout_x="206dp"
+            android:layout_y="338dp"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="126dp"
+            android:layout_y="301dp"
+            android:text="If you registered then,"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="106dp"
+            android:layout_height="46dp"
+            android:layout_x="25dp"
+            android:layout_y="233dp"
+            android:text="Home" />
+
+        <Button
+            android:id="@+id/register1"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_x="194dp"
+            android:layout_y="234dp"
+            android:text="Register" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="224dp"
+            android:layout_height="161dp"
+            android:layout_x="50dp"
+            android:layout_y="74dp"
+            android:src="@drawable/education" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="27dp"
+            android:layout_y="36dp"
+            android:text="Welcome to Education Hub"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
     </AbsoluteLayout>
+
 </LinearLayout>

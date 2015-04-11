@@ -1,75 +1,108 @@
 package com.example.group8_project;
 
 
-import android.support.v7.appcompat.*;
+
+
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.text.InputType;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ImageView;
+import android.widget.Toast;
 
-public class Login extends Activity implements OnClickListener {
+public class Login extends Activity {
 	
-	Button login;
-	EditText uname,password;
-	Spinner sp;
-	String s1,s2,s3,s4,s5,st;
-	
-
+	Intent i=null;
+	ImageView im=null;
+	EditText tv1,tv4;
+	boolean flag=false;
+	SQLiteDatabase db=null;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
+	
+		im=(ImageView)findViewById(R.id.show_hide2);
+		tv1=(EditText)findViewById(R.id.phone2);
+		tv4=(EditText)findViewById(R.id.password2);
+		db=openOrCreateDatabase("mydb", MODE_PRIVATE, null);
+	//	db.execSQL("create table if not exists login(name varchar,mobile_no varchar,email_id varchar,password varchar,flag varchar)");
 		
-		login = (Button)findViewById(R.id.loginLogin);
-		uname = (EditText)findViewById(R.id.usernameLogin);
-		password = (EditText)findViewById(R.id.passwordLogin);
-		
-		
-		sp = (Spinner)findViewById(R.id.spinnerLogin);
-		 sp.setOnItemSelectedListener(new OnItemSelectedListener() {
-
-				public void onItemSelected(AdapterView<?> arg0, View arg1,
-						int arg2, long arg3) {
-					// TODO Auto-generated method stub
-					st = arg0.getItemAtPosition(arg2).toString();
+		im.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+			
+				if(flag==false)
+				{
+					im.setImageResource(R.drawable.hide);
+					tv4.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD);
+					flag=true;
+				}
+				else
+				{
+					im.setImageResource(R.drawable.show);
+					tv4.setInputType(129);
+					flag=false;
 					
 				}
-
-				public void onNothingSelected(AdapterView<?> arg0) {
-					// TODO Auto-generated method stub
-					
-				}
-			});
-		
-		
-		login.setOnClickListener(this);
-		
-		
+			}
+		});
 	}
 	
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		if(v == login){			
-			Intent i=new Intent(Login.this,Dashboard.class);			
-			startActivity(i);		
+	public void action(View v)
+	{
+	switch(v.getId())
+	{
+	case R.id.signin2: 
+		i=new Intent(this,Register.class);
+		startActivityForResult(i, 500);
+		overridePendingTransition(R.anim.slide_in_top, R.anim.slide_out_bottom); 
+		finish();
+		break;
+	 case R.id.start:
+		String username=tv1.getText().toString();
+		String password=tv4.getText().toString();
+		if(username==null||username=="")
+		{
+			show("Please Enter Correct Username.");
 		}
+		else if(password==null||password==""||password.length()<6)
+		{
+			show("Please Enter Correct Password.");
+		}
+		else
+		{		
+			Cursor c=db.rawQuery("select * from login where name='"+username+"' and password='"+password+"'",null);	
+			c.moveToFirst();
+			if(c.getCount()>0)
+			{
+			i=new Intent(this,Dashboard.class);
+			startActivityForResult(i,500);
+			overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left); 
+			db.close();
+			finish();
+			}
+			else
+				show("Wrong Password or Username.");
+			
+		}
+		break;
 	}
-
+  }
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login, menu);
-		return true;
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
+	} 
+	
+	public void show(String str)
+	{
+	Toast.makeText(this, str, Toast.LENGTH_LONG).show();	
 	}
 
+	
 	
 }

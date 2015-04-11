@@ -1,7 +1,7 @@
 package com.example.group8_project;
 
 
-import android.support.v7.appcompat.*;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,10 +47,20 @@ public class Dashboard extends Activity implements OnClickListener {
 			startActivity(i);
 		}
 		
+		if (v== profile){
+			Intent i=new Intent(Dashboard.this,Profile.class);			
+			startActivity(i);
+		}
+		
 		if(v == message){
+			Intent i=new Intent(Dashboard.this, SendEmail.class);
+			startActivity(i);
 			
 		}
 		if(v == sclass){
+			
+			Intent i=new Intent(Dashboard.this, ListBatchesActivity.class);
+			startActivity(i);
 			
 		}
 		

@@ -28,16 +28,16 @@ public class DBhelper extends SQLiteOpenHelper {
 	public static final String LNAME = "lname";
 	public static final String DOB = "dob";
 	
-//	public static final String PROFILE2 = "profil2";
-//	public static final String IDPRO2 = BaseColumns._ID;
+	public static final String PROFILE2 = "profil2";
+	public static final String IDPRO2 = BaseColumns._ID;
 	public static final String ADDRESS = "address";
 	public static final String COUNTRY = "country";
-	public static final String STATE = "state";
+//	public static final String STATE = "state";
 	public static final String CITY = "city";
-//	public static final String ZIP = "zip";
+	public static final String ZIP = "zip";
 	
-//	public static final String PROFILE3 = "profile3";
-//	public static final String IDPRO3 = BaseColumns._ID;
+	public static final String PROFILE3 = "profile3";
+	public static final String IDPRO3 = BaseColumns._ID;
 	public static final String QUALIFICATION = "qualification";
 	public static final String INSTUATE = "instuate";
 	public static final String YEAR = "year";
@@ -68,22 +68,22 @@ public class DBhelper extends SQLiteOpenHelper {
 					+ NAME + " text , " + PASSWORD + " text , " + SIGNUPAS + " text , " + EMAIL + " text , " + PHONE + " text ) ";
 				   db.execSQL(reg);
 				   
-		 String pro1 =  " create table " + PROFILE + " ( " +  IDPRO1 + " integer primary key autoincrement , " 
-					+ FNAME + " text , " + LNAME + " text , " + DOB + " text , " + COUNTRY + " text , " + STATE + " text , " + QUALIFICATION + " text , " + YEAR + " text ) ";
-				   db.execSQL(pro1);
+		/* String pro1 =  " create table " + PROFILE + " ( " +  IDPRO1 + " integer primary key autoincrement , " 
+					+ FNAME + " text , " + LNAME + " text , " + DOB + " text , " + COUNTRY  + " text , " + QUALIFICATION + " text , " + YEAR + " text ) ";
+				   db.execSQL(pro1);*/
 				   
-	/*	 String pro1 =  " create table " + PROFILE + " ( " +  IDPRO1 + " integer primary key autoincrement , " 
+		 String pro1 =  " create table " + PROFILE + " ( " +  IDPRO1 + " integer primary key autoincrement , " 
 					+ FNAME + " text , " + LNAME + " text , " + DOB + " text ) ";
 					db.execSQL(pro1);
 					
 		 String pro2 =  " create table " + PROFILE2 + " ( " +  IDPRO2 + " integer primary key autoincrement , " 
-							+ ADDRESS + " text , " + COUNTRY + " text , " + STATE + " text , " + CITY + " text , " + ZIP + " text ) ";
+							+ ADDRESS + " text , " + COUNTRY + " text , " + CITY + " text , " + ZIP + " text ) ";
 					db.execSQL(pro2);
 					
 		 String pro3 =  " create table " + PROFILE3 + " ( " +  IDPRO3 + " integer primary key autoincrement , " 
 							+ QUALIFICATION + " text , " + INSTUATE + " text , " + YEAR + " text ) ";
 					db.execSQL(pro3);
-	*/				
+					
 		 String exp =  " create table " + EXPERIENCE + " ( " +  IDEXP + " integer primary key autoincrement , " 
 							+ ORGANISATION + " text , " + POSITION + " text , " + YEARS + " text , " + MONTHS + " text ) ";
 					db.execSQL(exp);

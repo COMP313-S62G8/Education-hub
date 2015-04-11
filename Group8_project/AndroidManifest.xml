@@ -7,21 +7,29 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
-
+    <uses-permission
+     android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+   
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:icon="@drawable/education"
+        android:label="@string/app_name">
+        
+        
+        
+        
         <activity
             android:name=".Main"
-            android:label="@string/title_activity_main" >
+            android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login" >
@@ -46,10 +54,63 @@
             android:name=".Resources"
             android:label="@string/title_activity_resources" >
         </activity>
+        <activity 
+            android:name=".SendEmail"
+            android:label="@string/title_activity_sendemail"></activity>
+        
+        <activity
+		      android:name="com.dropbox.client2.android.AuthActivity"
+		      android:launchMode="singleTask"
+		      android:configChanges="orientation|keyboard">
+		      <intent-filter>
+		        <!-- Change this to be db- followed by your app key -->
+		        <data android:scheme="db-gkntaktv81e6olz" />
+		        <action android:name="android.intent.action.VIEW" />
+		        <category android:name="android.intent.category.BROWSABLE"/>
+		        <category android:name="android.intent.category.DEFAULT" />
+		      </intent-filter>
+    	</activity>
         <activity
             android:name=".SearchFaculty"
             android:label="@string/title_activity_search_faculty" >
         </activity>
+        <activity
+            android:name=".Profile1"
+            android:label="@string/title_activity_profile1" >
+        </activity>
+        <activity
+            android:name=".Profile2"
+            android:label="@string/title_activity_profile2" >
+        </activity>
+        <activity
+            android:name=".Profile3"
+            android:label="@string/title_activity_profile3" >
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile" >
+        </activity>
+        
+        <activity
+            android:name=".ListBatchesActivity"
+            android:label="List Of Batches"/>
+            
+            <activity
+                android:name=".AddBatchActivity"
+                android:label="Add Batch" />
+            <activity
+                android:name=".ListClassesActivity"
+                android:label="List Classes" />
+            <activity
+                android:name=".AddClassActivity"
+                android:label="Add Class" />
+            <activity
+                android:name=".UpdateBatchActivity"
+                android:label="Update Batch" />
+            <activity
+                android:name=".UpdateClassActivity"
+                android:label="Update Class" />
+       
     </application>
 
 </manifest>

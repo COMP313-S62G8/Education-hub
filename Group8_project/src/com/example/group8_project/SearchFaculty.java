@@ -1,6 +1,5 @@
 package com.example.group8_project;
 
-import android.support.v7.appcompat.*;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;

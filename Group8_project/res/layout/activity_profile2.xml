@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bckg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <AbsoluteLayout
+                android:id="@+id/absoluteLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="490dp" >
+
+                <EditText
+                    android:id="@+id/emailpro2"
+                    android:layout_width="297dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="9dp"
+                    android:layout_y="34dp"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress" >
+
+                    <requestFocus>
+                    </requestFocus>
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="12dp"
+                    android:layout_y="84dp"
+                    android:text="Address :"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="184dp"
+                    android:text="Country"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/countrypro2"
+                    android:layout_width="205dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="99dp"
+                    android:layout_y="182dp" >
+                </EditText>
+
+               
+
+                <EditText
+                    android:id="@+id/citypro2"
+                    android:layout_width="204dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="100dp"
+                    android:layout_y="286dp" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/nameProfilenew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="16dp"
+                    android:layout_y="289dp"
+                    android:text="City"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/phoneProfilenew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="6dp"
+                    android:layout_y="351dp"
+                    android:text="Zip/Post Code"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/zippro2"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="138dp"
+                    android:layout_y="344dp" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/addresspro2"
+                    android:layout_width="210dp"
+                    android:layout_height="85dp"
+                    android:layout_x="92dp"
+                    android:layout_y="87dp"
+                    android:inputType="textMultiLine" >
+                </EditText>
+
+                <Button
+                    android:id="@+id/submitpro2"
+                    android:layout_width="113dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="194dp"
+                    android:layout_y="423dp"
+                    android:text="Continue" >
+                </Button>
+            </AbsoluteLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

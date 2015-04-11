@@ -1,7 +1,6 @@
 package com.example.group8_project;
 
 
-import android.support.v7.appcompat.*;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

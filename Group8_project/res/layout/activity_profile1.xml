@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bckg"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <AbsoluteLayout
+                android:id="@+id/absoluteLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="494dp" >
+
+                <EditText
+                    android:id="@+id/fnamepro1"
+                    android:layout_width="294dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="10dp"
+                    android:layout_y="36dp"
+                    android:hint="First name"
+                    android:inputType="textPersonName" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/lnamepro1"
+                    android:layout_width="294dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="81dp"
+                    android:hint="Last name"
+                    android:inputType="textPersonName" >
+
+                    <requestFocus>
+                    </requestFocus>
+                </EditText>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="88dp"
+                    android:layout_y="122dp" >
+
+                    <RadioButton
+                        android:id="@+id/radio0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="   Male"
+                        android:textColor="#000000" >
+                         </RadioButton>
+                    <RadioButton
+	                    android:id="@+id/radio1"
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_x="188dp"
+	                    android:layout_y="123dp"
+	                    android:text="   Female"
+	                    android:textColor="#000000" >
+              		  </RadioButton>
+                        
+                   
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="10dp"
+                    android:layout_y="134dp"
+                    android:text="Gender :-"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" >
+                </TextView>
+
+               
+                <EditText
+                    android:id="@+id/dobpro1"
+                    android:layout_width="294dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="11dp"
+                    android:layout_y="181dp"
+                    android:hint="Date of birth (dd/mm/yyyy)"
+                    android:inputType="date" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="12dp"
+                    android:layout_y="240dp"
+                    android:text="Upload Photo :"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <ImageView
+                    android:id="@+id/propicpro1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="166dp"
+                    android:layout_y="233dp"
+                    android:src="@drawable/icon" >
+                </ImageView>
+
+                <Button
+                    android:id="@+id/browsepro1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="228dp"
+                    android:layout_y="243dp"
+                    android:text="Browse" >
+                </Button>
+
+                <EditText
+                    android:id="@+id/emailpro2"
+                    android:layout_width="297dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="14dp"
+                    android:layout_y="306dp"
+                    android:hint="Email address"
+                    android:inputType="textEmailAddress" >
+                </EditText>
+
+               
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_x="98dp"
+                    android:layout_y="532dp"
+                    android:text="Qualification"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000" >
+                </TextView>
+
+                <EditText
+                    android:id="@+id/qualificationpro3"
+                    android:layout_width="290dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="14dp"
+                    android:layout_y="576dp"
+                    android:hint="Qualification" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/instuatepro3"
+                    android:layout_width="288dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="14dp"
+                    android:layout_y="620dp"
+                    android:hint="Institute" >
+                </EditText>
+
+                <EditText
+                    android:id="@+id/yearpro3"
+                    android:layout_width="183dp"
+                    android:layout_height="wrap_content"
+                    android:layout_x="15dp"
+                    android:layout_y="664dp"
+                    android:hint="year" >
+			</EditText>
+                    
+
+                    <requestFocus>
+                    </requestFocus>
+
+                    <EditText
+                        android:id="@+id/phoneEditpro"
+                        android:layout_width="289dp"
+                        android:layout_height="wrap_content"
+                        android:layout_x="14dp"
+                        android:layout_y="354dp"
+                        android:ems="10"
+                        android:hint="country" />
+
+                    <Button
+                        android:id="@+id/submitpro3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_x="116dp"
+                        android:layout_y="404dp"
+                        android:text="Continue" />
+                
+            </AbsoluteLayout>
+            
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
